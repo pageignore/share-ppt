@@ -1320,6 +1320,140 @@ setup(props) {
 </template>
 </LR>
 
+---
+
+# 调试
+让 `console.log` 更好看
+
+<LR>
+<template v-slot:left>
+
+<div v-click>
+
+```ts
+const str = ref('hello world')
+const num = ref(10086)
+const obj = ref({a: 1})
+
+const state = reactive({
+  list: [1, 2 ,3]
+})
+
+console.log(str)
+console.log(num)
+console.log(obj)
+console.log(state)
+```
+
+</div>
+
+</template>
+
+<template v-slot:right>
+
+<div v-click>
+
+![Remote Image](https://pageignore.github.io/share-ppt/log_img01.png)
+
+</div>
+
+</template>
+</LR>
+
+---
+
+# 调试
+让 `console.log` 更好看
+
+<v-clicks>
+
+<div class="mb-5 lh-30">
+浏览器允许我们编写自定义的 formatter，从而自定义输出形式。在 Vue.js 3 的源码中，你可以搜索到名为initCustomFormatter 的函数，该函数就是用来在开发环境下初始化自定义 formatter 的。
+</div>
+
+<div class="mb-5 lh-30">
+以Chrome 为例，我们可以打开 DevTools 的设置，然后勾选“Console”→“Enable custom formatters”选项。
+</div>
+
+</v-clicks>
+
+<LR>
+<template v-slot:left>
+
+<div v-click>
+
+```ts
+const str = ref('hello world')
+const num = ref(10086)
+const obj = ref({a: 1})
+
+const state = reactive({
+  list: [1, 2 ,3]
+})
+
+console.log(str)
+console.log(num)
+console.log(obj)
+console.log(state)
+```
+
+</div>
+
+</template>
+
+<template v-slot:right>
+
+<div v-click>
+
+![Remote Image](https://pageignore.github.io/share-ppt/log_img02.png)
+
+</div>
+
+</template>
+</LR>
+
+---
+
+# 优化
+
+<v-clicks>
+<div class="mb-5">
+• 使用 `shallowRef` 、`shallowReactive` 等浅层响应式函数
+</div>
+
+<div  class="mb-2">
+• Tree-Shaking
+</div>
+
+<div  class="mb-5">
+
+```ts
+const x = 3;
+/*#__PURE__*/ foo()
+const y = 4;
+```
+
+</div>
+
+<div  class="mb-2">
+• 特性开关
+</div>
+
+<div  class="mb-5">
+
+`__VUE_OPTIONS_API__`
+
+如果明确知道自己不会使用选项 API，用户就可以使用 __VUE_OPTIONS_API__ 开关来关闭该特性，这样在打包的时候 Vue.js 的这部分代码就不会包含在最终的资源中，从而减小资源体积。
+
+```ts
+// webpack.DefinePlugin 插件配置
+new webpack.DefinePlugin({
+  __VUE_OPTIONS_API__: JSON.stringify(true), // 开启特性
+})
+```
+
+</div>
+</v-clicks>
 
 ---
 
@@ -1380,6 +1514,8 @@ layout: center
 
 #### 谢谢～
 本演示文稿由 [Slidev](https://cn.sli.dev/) 强力驱动
+
+<test />
 
 
 

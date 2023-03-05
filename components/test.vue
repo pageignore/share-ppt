@@ -1,22 +1,23 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { reactify } from '@vueuse/core'
+import { reactive, ref } from 'vue'
 
-const useFloor= reactify(Math.floor)
-const usePow = reactify(Math.pow)
+const str = ref('hello world')
+const num = ref(10086)
+const obj = ref({a: 1})
 
-const x = ref(2.4)
-const res = usePow(useFloor(x), 2) // res = 4
+const state = reactive({
+  list: [1, 2 ,3]
+})
 
-console.log(res.value, 'res')
-
-x.value = 3.6 // res = 9
+console.log(str)
+console.log(num)
+console.log(obj)
+console.log(state);
 
 
 </script>
 
 <template>
   <div flex="~" w="min" border="~ gray-400 opacity-50 rounded-md">
-    {{ x }} he {{ res }}
   </div>
 </template>
