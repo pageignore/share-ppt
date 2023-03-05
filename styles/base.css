@@ -1,0 +1,27 @@
+.slidev-vclick-hidden {
+  display: none !important;
+}
+
+.lh-30{
+  line-height: 30px;
+}
+
+.flex-3{
+  display: flex;
+  justify-content: space-between;
+}
+.flex-3-item-01{
+  width: 19%;
+}
+.flex-3-item-02{
+  width: 59%;
+}
+.flex-3-item-03{
+  width: 20%;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
