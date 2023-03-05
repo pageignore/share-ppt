@@ -46,7 +46,7 @@ const setStyle2 = computed(() => {
       <div class="row">
         <div class="row-item">
           <CItem :style="setStyle1" name="𝒙" v-model:val="x" :canChange="true" />
-          <img class="img-01" src="/arrow_01.png">
+          <img class="img-01" src="https://pageignore.github.io/share-ppt/arrow_01.png" />
         </div>
         <div class="row-item">
           <CItem :style="setStyle2" name="𝒙" v-model:val="powX" :isPow="true" v-model:power="power"/>
@@ -55,7 +55,7 @@ const setStyle2 = computed(() => {
       <div class="row">
         <div class="row-item">
           <CItem :style="setStyle1" name="𝒚" v-model:val="y" :canChange="true" />
-          <img class="img-01" src="/arrow_01.png">
+          <img class="img-01" src="https://pageignore.github.io/share-ppt/arrow_01.png" />
         </div>
         <div class="row-item">
           <CItem :style="setStyle2" name="𝒚" v-model:val="powY" :isPow="true" v-model:power="power" />
@@ -63,7 +63,7 @@ const setStyle2 = computed(() => {
       </div>
       <div class="z-item">
         <CItem :style="setStyle2" name="𝒛" v-model:val="z" />
-        <img class="img-02" src="/arrow_02.png">
+        <img class="img-02" src="https://pageignore.github.io/share-ppt/arrow_02.png" />
       </div>
     </div>
   </div>

@@ -449,7 +449,7 @@ const toggleDark = useToggle(isDark)
 ---
 
 # 组合关系
-![Local Image](/useDark_img.png)
+![Remote Image](https://pageignore.github.io/share-ppt/useDark_img.png)
 
 <v-clicks>
 <div class="mb-5">• 每个函数都可以单独使用</div>
